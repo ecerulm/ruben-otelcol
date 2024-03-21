@@ -33,9 +33,12 @@ connectors:
   - gomod: go.opentelemetry.io/collector/connector/forwardconnector v0.96.0
 
 extensions:
-  - gomod: go.opentelemetry.io/collector/extension/ballastextension v0.96.0
-  - gomod: go.opentelemetry.io/collector/extension/memorylimiterextension v0.96.0
   - gomod: go.opentelemetry.io/collector/extension/zpagesextension v0.96.0
+  - gomod: go.opentelemetry.io/collector/extension/ballastextension v0.96.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension v0.96.0
+  - gomod: go.opentelemetry.io/collector/extension/memorylimiterextension v0.96.0
+
 processors:
   - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.96.0
   - gomod: go.opentelemetry.io/collector/processor/memorylimiterprocessor v0.96.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.96.0
