@@ -15,7 +15,7 @@ case $arch in
     ;;
 esac
 
-case $(uname -o) in 
+case $(uname -o) in
   'GNU/Linux')
     platform=linux
     ;;
@@ -28,10 +28,14 @@ case $(uname -o) in
     ;;
 esac
 
+VERSION=0.102.0
+
 curl --proto '=https' --tlsv1.2 -fL -o ocb \
-https://github.com/open-telemetry/opentelemetry-collector/releases/download/cmd%2Fbuilder%2Fv0.96.0/ocb_0.96.0_${platform}_${arch}
+https://github.com/open-telemetry/opentelemetry-collector/releases/download/cmd%2Fbuilder%2Fv${VERSION}/ocb_${VERSION}_${platform}_${arch}
 chmod +x ocb
 
-./ocb help
+VERSION=$VERSION envsubst <builder-config.yaml.tpl >builder-config.yaml
+
+./ocb version
 
 
