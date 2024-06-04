@@ -28,6 +28,7 @@ exporters:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/zipkinexporter v${VERSION}
   - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v${VERSION}
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsxrayexporter v${VERSION}
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/awsemfexporter v${VERSION}
 
 connectors:
   - gomod: go.opentelemetry.io/collector/connector/forwardconnector v${VERSION}
